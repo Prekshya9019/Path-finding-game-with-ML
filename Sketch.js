@@ -1,5 +1,5 @@
 let cols, rows;
-let w = 20;
+let w = 50;
 let grid = [];
 let current;
 let stack = [];
@@ -20,7 +20,7 @@ function setup() {
 }
 
 function draw() {
-  background(51);
+  background(154, 187, 192);
   for (let i = 0; i < grid.length; i++) {
     grid[i].show();
   }
