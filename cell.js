@@ -36,7 +36,7 @@ function Cell(i, j) {
     let x = this.i * w;
     let y = this.j * w;
     noStroke();
-    fill(0, 0, 255, 100);
+    fill(192, 154, 184 );
     rect(x, y, w, w);
   };
 
@@ -59,7 +59,7 @@ function Cell(i, j) {
 
     if (this.visited) {
       noStroke();
-      fill(255, 0, 255, 100);
+      fill(192, 154, 184 );
       rect(x, y, w, w);
     }
   };
