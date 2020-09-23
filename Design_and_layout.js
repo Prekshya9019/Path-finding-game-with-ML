@@ -3,7 +3,7 @@ let w = 50;
 let grid = [];
 let current;
 let stack = [];
-let start = grid[0];
+
 
 function setup() {
   let canvas1 = createCanvas(600, 500);
@@ -44,6 +44,9 @@ function draw() {
   } else if (stack.length > 0) {
     current = stack.pop();
   }
+  if (keyIsPressed === true) {
+    keyPressed();
+  }
 }
 
 function index(i, j) {
@@ -71,11 +74,26 @@ function removeWalls(a, b) {
     b.walls[0] = false;
   }
 }
-
-function player(){
-  if (current = grid[0]){
-    nostroke();
-    fill(0);
-    rect(x, y, w, w);
+function keyPressed() {
+  if (keyCode === LEFT_ARROW) {
+    positionX = positionX - 1;
+    fill(255, 255, 255);
+    rect(positionX, positionY, w, w);
+  } else if(keyCode === RIGHT_ARROW){
+    positionX = positionX + 1;
+    fill(255, 255, 255);
+    rect(positionX, positionY, w, w);
+  } else if(keyCode === UP_ARROW){
+    positionY = positionY - 1
+    fill(255, 255, 255);
+    rect(positionX, positionY, w, w);
+  } else if(keyCode === DOWN_ARROW){
+    positionY = positionY + 1
+    fill(255, 255, 255);
+    rect(positionX, positionY, w, w);
   }
+}
+
+
+
 }
